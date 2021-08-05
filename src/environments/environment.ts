@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiRoot: 'http://localhost:3000/',
+  apiRootAdmin: 'http://localhost:3000/admin/',
+  defaultLanguage: "ar",// ar or en 
+  arTitle: "العنوان ",
+  enTitle: "Title",
 };
 
 /*

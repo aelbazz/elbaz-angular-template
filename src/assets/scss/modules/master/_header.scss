@@ -1,0 +1,99 @@
+.header {
+    position: relative;
+    width: 100%;
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        #{$left}: 0;
+        width: 50%;
+        background-color: #B9BDBD;
+        height: 70px;
+        @include bp(sm){
+            height: 80px;
+        } 
+        @include bp(md){
+            height: 90px;
+        } 
+        @include bp(lg){
+            height: 100px;
+        } 
+        @include bp(xl){
+            height: 100%;
+        }
+
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    &-logo {
+        position: relative;
+        background-color: #B9BDBD;
+        padding-#{$right}: 70px;
+
+
+        &:after {
+            content: "";
+            #{$left}: calc(100% - 50px);
+            top: 0;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-bottom: 110px solid white;
+            border-#{$left}: 50px solid transparent;
+
+        }
+
+
+        .navbar-brand {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            .image {
+                height: 50px;
+                
+                @include bp(sm){
+                    height: 60px;
+                }
+                @include bp(md){
+                    height: 70px;
+                }
+                @include bp(lg){
+                    height: 80px;
+                }
+                @include bp(xl){
+                    height: 90px;
+                }
+            }
+        }
+
+    }
+
+    .nav-item {
+        &:not(:last-child) {
+            margin-#{$right}: 55px;
+        }
+
+        &.active {
+            .nav-link {
+                color: $primary;
+            }
+        }
+
+        .nav-link {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 700;
+        }
+    }
+
+    &-menu{
+        padding-bottom: 30px;
+        @include bp(sm){
+            padding-bottom: 0px;
+        }
+    }
+
+}
